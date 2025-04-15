@@ -1,0 +1,39 @@
+{
+	"SafeLine": {
+		"Host": {
+			"HostName": "192.168.1.4",
+			"Port": "1443"
+		},
+		"ApiToken": "xxx"
+	},
+	"ApplyCert": {
+		"Days": 30,
+		"Email": "xxx",
+		"SavePath": "/tmp/ssl",
+		"DNSProviderConfig": {
+			"DNSProvider": "xxx",
+			"TencentCloud": {
+				"SecretId": "xxx",
+				"SecretKey": "xxx"
+			},
+			"AliCloud": {
+				"AccessKeyId": "xxx",
+				"AccessKeySecret": "xxx",
+				"RAMRole": "xxx(可选)",
+				"STSToken": "xxx(可选)"
+			},
+			"HuaweiCloud": {
+				"AccessKeyId": "xxx",
+				"Region": "xxx",
+				"SecretAccessKey": "xxx"
+			},
+			"WestCN": {
+				"Username": "xxx",
+				"Password": "xxx"
+			},
+			"RainYun": {
+				"ApiKey": "xxx"
+			}
+		}
+	}
+}
