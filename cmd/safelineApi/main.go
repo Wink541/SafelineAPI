@@ -31,7 +31,6 @@ func main() {
 	certNodes := utils.GetList(urlStr, conf.ApiToken.String())
 	certUpsert := moudle.CheckNodes(certNodes, conf.Days)
 	p, err := moudle.ChooseDNSProvider(conf.DNSProviderConfig)
-	fmt.Println(p)
 	if err != nil {
 		logger.Error.Println(fmt.Sprintf("验证 DNS 服务提供商时发生错误: %s%s%s", logger.Red, err, logger.Reset))
 		os.Exit(0)
