@@ -3,6 +3,7 @@ package config
 import (
 	"github.com/go-acme/lego/v4/challenge"
 	"github.com/go-acme/lego/v4/providers/dns/alidns"
+	"github.com/go-acme/lego/v4/providers/dns/dode"
 	"github.com/go-acme/lego/v4/providers/dns/huaweicloud"
 	"github.com/go-acme/lego/v4/providers/dns/rainyun"
 	"github.com/go-acme/lego/v4/providers/dns/tencentcloud"
@@ -48,5 +49,12 @@ func (rain RainYun) Provider() (challenge.Provider, error) {
 	cfg := rainyun.NewDefaultConfig()
 	cfg.APIKey = rain.ApiKey
 	p, err := rainyun.NewDNSProviderConfig(cfg)
+	return p, err
+}
+
+func (Dode Dode) Provider() (challenge.Provider, error) {
+	cfg := dode.NewDefaultConfig()
+	cfg.Token = Dode.Token
+	p, err := dode.NewDNSProviderConfig(cfg)
 	return p, err
 }

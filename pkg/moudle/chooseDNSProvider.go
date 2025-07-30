@@ -17,6 +17,8 @@ func ChooseDNSProvider(config config.DNSProviderConfig) (challenge.Provider, err
 		return config.WestCN.Provider()
 	} else if config.DNSProvider == "RainYun" {
 		return config.RainYun.Provider()
+	} else if config.DNSProvider == "Dode" {
+		return config.Dode.Provider()
 	}
 	return nil, errors.New("未正确设置 DNS 服务提供商")
 }

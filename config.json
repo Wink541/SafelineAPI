@@ -33,6 +33,9 @@
 			},
 			"RainYun": {
 				"ApiKey": "xxx"
+			},
+			"Dode": {
+				"Token": "xxx"
 			}
 		}
 	}

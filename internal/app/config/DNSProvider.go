@@ -7,6 +7,7 @@ type DNSProviderConfig struct {
 	HuaweiCloud  `json:"HuaweiCloud,omitempty"`
 	WestCN       `json:"WestCN,omitempty"`
 	RainYun      `json:"RainYun,omitempty"`
+	Dode         `json:"Dode,omitempty"`
 }
 
 type TencentCloud struct {
@@ -34,4 +35,8 @@ type WestCN struct {
 
 type RainYun struct {
 	ApiKey string `json:"ApiKey,omitempty"`
+}
+
+type Dode struct {
+	Token string `json:"Token,omitempty"`
 }
